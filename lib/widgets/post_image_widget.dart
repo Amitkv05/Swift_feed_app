@@ -30,8 +30,6 @@ class _PostImageState extends State<PostImage> {
               height: 400,
               fit: BoxFit.cover,
               cacheWidth: 1200,
-
-              // 👇 ADD THIS
               errorBuilder: (context, error, stackTrace) {
                 return Container(
                   height: 400,
@@ -46,15 +44,6 @@ class _PostImageState extends State<PostImage> {
                 );
               },
             ),
-            // Positioned(
-            //   bottom: -10,
-            //   right: -1,
-            //   child: PostActions(
-            //     post: widget.post,
-            //     isLiked: isLiked,
-            //     onLike: () => _handleLike(widget.post),
-            //   ),
-            // ),
           ],
         ),
       ),

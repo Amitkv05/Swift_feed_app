@@ -54,7 +54,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   @override
   void dispose() {
-    _scrollController.dispose(); // ✅ clean up controller
+    _scrollController.dispose(); 
     super.dispose();
   }
 
