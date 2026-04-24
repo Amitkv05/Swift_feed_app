@@ -4,6 +4,7 @@
 A high-performance infinite scrolling social feed built using Flutter, Riverpod, and Supabase.
 ________________________________________
 📱 Features
+
 •	Infinite scrolling feed with pagination 
 •	Pull-to-refresh support 
 •	Optimistic UI for likes 
@@ -13,19 +14,27 @@ ________________________________________
 •	3-tier image loading (thumb → mobile → raw) 
 ________________________________________
 ⚙️ Tech Stack
+
 •	Flutter 
 •	Riverpod (State Management) 
 •	Supabase (Database + Storage + RPC) 
 ________________________________________
 🧠 Architecture
+
 The app follows a clean separation:
+
 •	UI Layer → Handles rendering & user interaction 
+
 •	State Layer (Riverpod) → Manages feed state & API calls 
+
 •	Backend (Supabase) → Handles data + concurrency-safe RPC 
 ________________________________________
 ⚡ Performance Optimizations
+
 1. GPU Optimization
+
 •	Used RepaintBoundary to isolate heavy UI cards 
+
 •	Prevents unnecessary re-rasterization during scrolling 
 ________________________________________
 2. Memory Optimization
