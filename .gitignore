@@ -44,3 +44,12 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Environment variables
+.env
+
+# Supabase / API keys (extra safety)
+*.env
+
+# macOS hidden files (already partially covered but safe)
+.DS_Store?
