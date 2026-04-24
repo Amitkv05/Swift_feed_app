@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:swift_feed_app/home_screen.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
+  await dotenv.load(fileName: "lib/.env");
   await Supabase.initialize(
-    url: 'https://fwjnyqbacjxsnqyfillv.supabase.co',
-    anonKey: 'sb_publishable_eU6eWBk83S9eOuVRWDpA3A_7iD-9UGr',
+    url: dotenv.env['SUPABASE_URL']!,
+    anonKey: dotenv.env['SUPABASE_ANON_KEY']!,
   );
   runApp(ProviderScope(child: MainApp()));
 }
